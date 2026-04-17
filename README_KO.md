@@ -55,10 +55,12 @@ HARNEX의 비역할:
 ## 패키지 구성
 
 - `@runchr/harnex`: CLI 진입점 및 UX
-- `@runchr/core`: 감지, 설정, 플랜, 커맨드 빌드
-- `@runchr/shared`: 공통 타입 및 스키마
-- `@runchr/openwork`: openwork preset placeholder
-- `@runchr/paperclip`: paperclip preset placeholder
+- `@runchr/core`: 내부 코어 모듈 패키지(모노레포 전용)
+- `@runchr/shared`: 내부 공통 타입/스키마 패키지(모노레포 전용)
+- `@runchr/openwork`: 내부 placeholder 패키지(모노레포 전용)
+- `@runchr/paperclip`: 내부 placeholder 패키지(모노레포 전용)
+
+외부 npm 공개 패키지는 `@runchr/harnex` 하나입니다.
 
 ## 사전 요구사항
 
@@ -76,6 +78,18 @@ pnpm dev init
 pnpm dev verify --scope shared
 pnpm dev run --task "create api server"
 ```
+
+## 전역 설치 없이 바로 실행하기 (npx)
+
+```bash
+npx @runchr/harnex doctor
+npx @runchr/harnex setup --yes
+npx @runchr/harnex verify --scope shared
+npx @runchr/harnex uninstall all --dry-run
+```
+
+일회성 실행은 `npx`가 편하고,  
+반복 개발/검증은 이 저장소의 `pnpm dev ...` 흐름을 권장합니다.
 
 ## 빠른 시작 (App Layer까지 사용하는 경우)
 

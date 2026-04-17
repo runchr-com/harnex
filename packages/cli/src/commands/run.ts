@@ -1,5 +1,5 @@
 import pc from "picocolors";
-import { buildRunCommand, executeRunCommand, resolveConfig } from "@runchr/core";
+import { buildRunCommand, executeRunCommand, resolveConfig } from "../internal/core/index.js";
 import { resolveCommandCwd } from "../utils/cwd.js";
 
 interface RunOptions {

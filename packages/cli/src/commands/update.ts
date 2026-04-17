@@ -6,7 +6,7 @@ import {
   getUpdateGuidance,
   resolveAppUpdateCommand,
   resolveUpdateCommands
-} from "@runchr/core";
+} from "../internal/core/index.js";
 
 type UpdateTarget = "all" | "shared" | "apps" | "opencode" | "ollama" | "openwork" | "paperclipai";
 

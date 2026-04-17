@@ -8,7 +8,7 @@ import {
   resolveAppUninstallCommand,
   resolveUninstallCommands,
   type AppName
-} from "@runchr/core";
+} from "../internal/core/index.js";
 import { resolveCommandCwd } from "../utils/cwd.js";
 
 type UninstallTarget = "all" | "shared" | "apps" | "opencode" | "ollama" | "openwork" | "paperclipai";

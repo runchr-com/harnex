@@ -1,5 +1,5 @@
 import pc from "picocolors";
-import { generateVerifyReport } from "@runchr/core";
+import { generateVerifyReport } from "../internal/core/index.js";
 import { resolveCommandCwd } from "../utils/cwd.js";
 
 interface VerifyOptions {

@@ -4,7 +4,7 @@ import {
   getAppInstallGuidance,
   resolveAppInstallCommand,
   type AppName
-} from "@runchr/core";
+} from "../internal/core/index.js";
 
 interface InstallOptions {
   yes?: boolean;

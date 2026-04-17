@@ -1,5 +1,5 @@
 import pc from "picocolors";
-import { generateDoctorReport } from "@runchr/core";
+import { generateDoctorReport } from "../internal/core/index.js";
 import { resolveCommandCwd } from "../utils/cwd.js";
 
 interface DoctorOptions {

@@ -56,10 +56,12 @@ Control-plane:
 ## Packages
 
 - `@runchr/harnex`: CLI entrypoint and command UX
-- `@runchr/core`: detection, config, planning, command building
-- `@runchr/shared`: shared types and schemas
-- `@runchr/openwork`: openwork preset placeholder
-- `@runchr/paperclip`: paperclip preset placeholder
+- `@runchr/core`: internal core module package (monorepo only)
+- `@runchr/shared`: internal shared types/schemas (monorepo only)
+- `@runchr/openwork`: internal placeholder package (monorepo only)
+- `@runchr/paperclip`: internal placeholder package (monorepo only)
+
+Public npm package: `@runchr/harnex` only.
 
 ## Prerequisites
 
@@ -77,6 +79,18 @@ pnpm dev init
 pnpm dev verify --scope shared
 pnpm dev run --task "create api server"
 ```
+
+## Try Without Global Install (npx)
+
+```bash
+npx @runchr/harnex doctor
+npx @runchr/harnex setup --yes
+npx @runchr/harnex verify --scope shared
+npx @runchr/harnex uninstall all --dry-run
+```
+
+For one-off usage, `npx` is convenient.  
+For repeated local development, this repository workflow (`pnpm dev ...`) is recommended.
 
 ## Quick Start (With App Layer)
 

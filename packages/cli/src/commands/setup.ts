@@ -9,8 +9,8 @@ import {
   resolveInstallCommand,
   type InstallCommand,
   type InstallMethod
-} from "@runchr/core";
-import type { SetupAction } from "@runchr/core";
+} from "../internal/core/index.js";
+import type { SetupAction } from "../internal/core/index.js";
 import { resolveCommandCwd } from "../utils/cwd.js";
 
 interface SetupOptions {

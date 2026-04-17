@@ -26,10 +26,9 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@runchr/core": "workspace:*",
-    "@runchr/shared": "workspace:*",
     "commander": "^12.1.0",
-    "picocolors": "^1.1.1"
+    "picocolors": "^1.1.1",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
     "@types/node": "^22.15.3",

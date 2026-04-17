@@ -1,6 +1,7 @@
 {
   "name": "@runchr/openwork",
   "version": "0.1.0",
+  "private": true,
   "description": "Openwork harness preset for HARNEX.",
   "type": "module",
   "main": "dist/index.js",

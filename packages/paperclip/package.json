@@ -1,6 +1,7 @@
 {
   "name": "@runchr/paperclip",
   "version": "0.1.0",
+  "private": true,
   "description": "Paperclip harness preset for HARNEX.",
   "type": "module",
   "main": "dist/index.js",

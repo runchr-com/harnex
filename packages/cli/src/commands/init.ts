@@ -1,5 +1,5 @@
 import pc from "picocolors";
-import { initializeProject } from "@runchr/core";
+import { initializeProject } from "../internal/core/index.js";
 import { resolveCommandCwd } from "../utils/cwd.js";
 
 interface InitOptions {

@@ -4,7 +4,7 @@ import {
   getAppCommand,
   writeAppLink,
   type AppName
-} from "@runchr/core";
+} from "../internal/core/index.js";
 import { resolveCommandCwd } from "../utils/cwd.js";
 
 interface LinkOptions {
