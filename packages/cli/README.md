@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/%40runchr%2Fharnex)](https://www.npmjs.com/package/@runchr/harnex)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-Korean version: [README_KO.md](./README_KO.md)
+Korean version: https://github.com/runchr-com/harnex/blob/main/README_KO.md
 
 HARNEX is a control-plane CLI for local AI stacks.  
 It does not try to replace OpenWork, PaperclipAI, OpenCode, or Ollama.  
@@ -131,6 +131,25 @@ pnpm dev --dry-run --task "health check"
 
 `doctor` returns exit code `0` by default for screen-based diagnostics.  
 Use `harnex doctor --strict` when you want failure exit codes (for CI).
+
+## Install vs Link (Important)
+
+`install` and `link` are intentionally different:
+
+- `harnex install openwork` / `harnex install paperclipai`
+  - Installs the app CLI binary on your machine (global tool install).
+- `harnex link openwork` / `harnex link paperclipai`
+  - Registers that app for the current project in `.harnex/apps.json`.
+  - No package installation happens here.
+
+Typical flow:
+
+```bash
+harnex install all
+harnex link openwork
+harnex link paperclipai
+harnex verify --scope apps
+```
 
 ## Troubleshooting
 

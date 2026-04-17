@@ -131,6 +131,25 @@ pnpm dev --dry-run --task "health check"
 `doctor`는 기본적으로 종료코드 `0`을 반환합니다.  
 CI처럼 실패 코드가 필요하면 `harnex doctor --strict`를 사용하세요.
 
+## install vs link (중요)
+
+`install`과 `link`는 역할이 다릅니다.
+
+- `harnex install openwork` / `harnex install paperclipai`
+  - 앱 CLI 바이너리를 머신에 설치합니다(전역 툴 설치).
+- `harnex link openwork` / `harnex link paperclipai`
+  - 현재 프로젝트의 `.harnex/apps.json`에 앱 연동 상태를 등록합니다.
+  - 이 단계에서는 패키지 설치가 일어나지 않습니다.
+
+권장 순서:
+
+```bash
+harnex install all
+harnex link openwork
+harnex link paperclipai
+harnex verify --scope apps
+```
+
 ## 트러블슈팅
 
 - `pnpm dev doctor`에서 missing이 보여도 에러 코드가 안 나는 경우:
