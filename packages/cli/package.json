@@ -1,11 +1,11 @@
 {
   "name": "@runchr/harnex",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "HARNEX CLI entrypoint.",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/runchr/harnex.git"
+    "url": "git+https://github.com/runchr-com/harnex.git"
   },
   "publishConfig": {
     "access": "public"
