@@ -1,6 +1,6 @@
 {
   "name": "@runchr/harnex",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "HARNEX CLI entrypoint.",
   "license": "MIT",
   "repository": {
